@@ -26,7 +26,7 @@ public class TaskController {
 
     @GetMapping
     public ResponseEntity<Page<Task>> getAllTasks(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
-        log.info("Received request to get all tasks with page: {} and size: {}", page, size);
+        log.info("Received one request to get all tasks with page: {} and size: {}", page, size);
         Page<Task> tasks = taskService.getAllTasks(page, size);
         return ResponseEntity.ok(tasks);
     }
