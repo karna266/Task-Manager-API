@@ -40,8 +40,8 @@ public class Task {
     @Column(nullable = false)
     private Priority priority;
 
-    @NotBlank(message = "UserId is required")
-    private String userId;
+    @NotNull(message = "UserId is required")
+    private Long userId;
 
     @PastOrPresent(message = "Created date cannot be in the future")
     private LocalDateTime createdAt;

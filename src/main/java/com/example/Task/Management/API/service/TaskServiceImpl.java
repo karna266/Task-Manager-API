@@ -20,7 +20,7 @@ import static java.util.Arrays.stream;
 @RequiredArgsConstructor
 public class TaskServiceImpl implements TaskService{
 
-private TaskRepository taskRepository;
+private final TaskRepository taskRepository;
     @Override
     public Page<Task> getAllTasks(int page, int size) {
         log.info("Fetching tasks with pagination - page: {}, size: {}", page, size);

@@ -31,10 +31,10 @@ public class TaskController {
         return ResponseEntity.ok(tasks);
     }
 
-   @GetMapping("/{ids}")
-    public ResponseEntity<Task> getTasksById(@Valid @PathVariable int ids) {
-        log.info("Received request to get tasks by IDs: {}", ids);
-         Task fetchedTask = taskService.getTasksByIds(ids);
+   @GetMapping("/{id}")
+    public ResponseEntity<Task> getTasksById(@Valid @PathVariable int id) {
+        log.info("Received request to get tasks by IDs: {}", id);
+         Task fetchedTask = taskService.getTasksByIds(id);
         return ResponseEntity.ok(fetchedTask);
     }
 
