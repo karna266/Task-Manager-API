@@ -53,7 +53,7 @@ private TaskRepository taskRepository;
     public Task updateTask(int id, Task task) {
             Task existingTask = taskRepository.findById((long) id).orElseThrow(
                     () -> {
-                        log.info("Task nnot found with id: {}", id);
+                        log.info("Task not found with id: {}", id);
                         return new TaskNotFoundException("Task not found with id: " + id);
                     }
             );
