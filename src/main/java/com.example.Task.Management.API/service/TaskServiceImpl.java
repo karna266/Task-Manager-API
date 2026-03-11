@@ -25,7 +25,7 @@ private final TaskRepository taskRepository;
     public Page<Task> getAllTasks(int page, int size) {
         log.info("Fetching tasks with pagination - page: {}, size: {}", page, size);
         Pageable pageable = PageRequest.of(page, size);
-        log.debug("Constructed Pageable: {}", pageable);
+        log.debug("Constructed Pageable : {}", pageable);
         return taskRepository.findAll(pageable);
     }
 
