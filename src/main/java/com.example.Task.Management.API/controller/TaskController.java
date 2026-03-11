@@ -6,13 +6,11 @@ import com.example.Task.Management.API.service.TaskService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/api/tasks")
@@ -65,4 +63,6 @@ public class TaskController {
         List<Task> tasks = taskService.getTasksByUserId(userId);
         return ResponseEntity.ok(tasks);
     }
+
+
 }
